@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Quelldateien\general">
+      <UniqueIdentifier>{52621754-d4a1-4ebe-885a-191100da811c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\general">
+      <UniqueIdentifier>{2f843f65-3a53-45d3-a288-454aec0cdf35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\miscellaneous">
+      <UniqueIdentifier>{f2b6edbb-ad16-46d7-a295-3fa78145f35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\miscellaneous">
+      <UniqueIdentifier>{ae6f088d-2b94-43da-8724-e864ca0985f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\symmetricKey">
+      <UniqueIdentifier>{418dad3a-bfe6-4c07-b547-e3ee360e9512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\symmetricKey">
+      <UniqueIdentifier>{e1ae2178-d096-4be4-ab1e-a2c9565f7443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\publicKey">
+      <UniqueIdentifier>{0244eb83-bcab-45e1-a1b2-d751dfa5374b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\publicKey">
+      <UniqueIdentifier>{37e76d59-8c0c-4e54-9d6a-a1c52d25a4d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assert.cpp">
+      <Filter>Quelldateien\general</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Quelldateien\general</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Quelldateien\general</Filter>
+    </ClCompile>
+    <ClCompile Include="gcd.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="historic.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="des.cpp">
+      <Filter>Quelldateien\symmetricKey</Filter>
+    </ClCompile>
+    <ClCompile Include="rsa.cpp">
+      <Filter>Quelldateien\publicKey</Filter>
+    </ClCompile>
+    <ClCompile Include="squareAndMultiply.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="hash.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="ellipticCurve.cpp">
+      <Filter>Quelldateien\publicKey</Filter>
+    </ClCompile>
+    <ClCompile Include="rabin.cpp">
+      <Filter>Quelldateien\publicKey</Filter>
+    </ClCompile>
+    <ClCompile Include="millerRabin.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="faktorisierung.cpp">
+      <Filter>Quelldateien\miscellaneous</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assert.h">
+      <Filter>Headerdateien\general</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Headerdateien\general</Filter>
+    </ClInclude>
+    <ClInclude Include="gcd.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="historic.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="des.h">
+      <Filter>Headerdateien\symmetricKey</Filter>
+    </ClInclude>
+    <ClInclude Include="desboxes.h">
+      <Filter>Headerdateien\symmetricKey</Filter>
+    </ClInclude>
+    <ClInclude Include="rsa.h">
+      <Filter>Headerdateien\publicKey</Filter>
+    </ClInclude>
+    <ClInclude Include="squareAndMultiply.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="ellipticCurve.h">
+      <Filter>Headerdateien\publicKey</Filter>
+    </ClInclude>
+    <ClInclude Include="rabin.h">
+      <Filter>Headerdateien\publicKey</Filter>
+    </ClInclude>
+    <ClInclude Include="millerRabin.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="faktorisierung.h">
+      <Filter>Headerdateien\miscellaneous</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
