@@ -37,7 +37,33 @@ std::string vigenere(std::string word, std::string key)
 double coincidenceIndex(std::string word)
 {
 	double indexOfCoincidence = 0;
+	const std::string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int m_i[26];
+	double summM_i = 0.0;
+	int m = word.length();
+
+	// Count number of characters
+	for (int i = 0; i < alphabet.length(); i++)
+	{
+		int count = 0;
+		for (int n = 0; n < word.length(); n++) {
+			if (word[n] == alphabet[i]) 
+			{
+				count++;
+			}
+		}
+		m_i[i] = count;
+	}
+
+	// Calculate summ m_i
+	for (int i = 0; i < (sizeof(m_i)/sizeof(m_i[0])); i++)
+	{
+		summM_i += m_i[i] * (m_i[i] - 1);
+	}
 	
+	// Calculate indexOfCoincidence
+
+	indexOfCoincidence = summM_i / (m*(m - 1));
 
 	return indexOfCoincidence;
 }
