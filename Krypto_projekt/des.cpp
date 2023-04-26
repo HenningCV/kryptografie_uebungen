@@ -30,6 +30,13 @@ void str_output(std::string input)
 std::string shiftLeftOnce(std::string keyTmp)
 {
 	std::string shifted = "";
+
+	for (int i = 0; i < keyTmp.length() - 1; i++)
+	{
+		shifted += keyTmp[i + 1];
+	}
+
+	shifted += keyTmp[0];
 	
 	return shifted;
 }
@@ -37,6 +44,9 @@ std::string shiftLeftOnce(std::string keyTmp)
 std::string shiftLeftTwice(std::string keyTmp)
 {
 	std::string shifted = "";
+
+	shifted = shiftLeftOnce(keyTmp);
+	shifted = shiftLeftOnce(shifted);
 	
 	return shifted;
 }
@@ -44,7 +54,18 @@ std::string shiftLeftTwice(std::string keyTmp)
 std::string getKey(std::string keyPerm56, int round)
 {
 	std::string keyCombined56 = "";
+	std::string keyPartOne = keyPerm56.substr(0,28);
+	std::string keyPartTwo = keyPerm56.substr(28,28);
 
+	if (round == 1 || round == 2 || round == 9 || round == 16)
+	{
+		keyCombined56 = shiftLeftOnce(keyPartOne) + shiftLeftOnce(keyPartTwo);
+	}
+	else
+	{
+		keyCombined56 = shiftLeftTwice(keyPartOne) + shiftLeftTwice(keyPartTwo);
+	}
+	
 	return keyCombined56;
 }
 
@@ -87,6 +108,26 @@ std::string sBoxSubstitution(std::string expXorKey48)
 {
 
 	std::string sBoxed32 = "";
+	std::string subString = "";
+	std::string innerBits = "";
+	std::string outerBits = "";
+	int innerBitsDec = NULL;
+	int outerBitsDec = NULL;
+	int sBoxDec = NULL;
+
+	for (int i = 0; i < 8; i++)
+	{
+		subString = expXorKey48.substr(i * 6, 6);
+		innerBits = subString.substr(1, 4);
+		outerBits = subString.substr(0,1) + subString.substr(5,1);
+
+		innerBitsDec = binToDec(innerBits);
+		outerBitsDec = binToDec(outerBits);
+
+		sBoxDec = substitionBoxes[i][outerBitsDec][innerBitsDec];
+
+		sBoxed32 += DecToBin(sBoxDec);
+	}
 
 	return sBoxed32;
 }
@@ -94,6 +135,11 @@ std::string sBoxSubstitution(std::string expXorKey48)
 std::string permutation(const int matrix[], size_t arrayLength, std::string input)
 {
 	std::string output = "";
+
+	for (int i = 0; i < arrayLength/sizeof(int); i++)
+	{
+		output += input[matrix[i] - 1];
+	}
 
 	return output;
 }
